@@ -1,0 +1,135 @@
+//font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono:wght@300&display=swap");
+// variables
+
+//
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+}
+header {
+  .hero-content {
+    margin: 2em 0 0 0.5em;
+    .hero-title {
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+    .hero-desc {
+      display: flex;
+
+      svg {
+        height: 3.5em;
+        min-width: 1.25em;
+        fill: #afafaf;
+        vertical-align: top;
+      }
+      p {
+        margin-left: 0.5em;
+        font-style: italic;
+      }
+    }
+  }
+  .hero-img {
+    border-radius: 1em;
+    width: 100%;
+  }
+}
+main {
+  .one-line {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card > .card-info {
+    display: flex;
+    svg {
+      width: 1.5em;
+      margin: 1em;
+    }
+    .orange {
+      fill: rgb(255, 81, 0);
+      color: rgb(255, 81, 0);
+    }
+    .card-content {
+      line-height: 1em;
+      font-size: 0.8rem;
+      text-transform: capitalize;
+      font-weight: bold;
+      h3 {
+        color: #919191;
+      }
+    }
+  }
+  section {
+    margin: 1em;
+
+    .ingredients-title,
+    .instruction-title {
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+    .ingredients > h4 {
+      text-transform: capitalize;
+      font-style: italic;
+    }
+    .ingredient {
+      list-style-type: none;
+      margin-left: -2.5em;
+      line-height: 2em;
+      li > input {
+        width: 1.5em;
+        height: 1.5em;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    }
+    .instruction {
+      list-style-type: none;
+
+      counter-reset: my-awesome-counter;
+      margin: 0;
+      padding: 0;
+      li {
+        counter-increment: my-awesome-counter;
+        margin-bottom: 0.5rem;
+        margin-bottom: 2em;
+        span {
+          font-weight: bold;
+        }
+      }
+      li::before {
+        content: "0" counter(my-awesome-counter);
+        font-weight: bold;
+        font-size: 2em;
+        margin-right: 0.5rem;
+        font-family: "Abril Fatface", serif;
+        line-height: 1;
+        background: rgb(255, 81, 0);
+        color: #fafafa;
+        border-radius: 0.15em;
+      }
+    }
+  }
+  a {
+    color: #919191;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+footer {
+  text-align: center;
+  span {
+    text-decoration: underline;
+  }
+}
+@media only screen and (min-width: 600px) {
+  body {
+    margin: 0 7em 0 7em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0 10em 0 10em;
+  }
+}
